@@ -4,10 +4,16 @@ import { Cross2Icon, CheckIcon,	ChevronDownIcon} from "@radix-ui/react-icons";
 import classnames from "classnames";
 import * as Select from "@radix-ui/react-select";
 import * as HoverCard from "@radix-ui/react-hover-card";
-
-
-
 import "./styles.css";
+import ImageSlider from "./ImageSlider";
+const images = [
+    'https://m.media-amazon.com/images/I/81lrHgxEvCL._AC_SX679_.jpg',
+    'https://m.media-amazon.com/images/I/91Ybcqk+1yL._AC_SY741_.jpg',
+    'https://m.media-amazon.com/images/I/91T6TRRTyQL._AC_SY741_.jpg',
+    'https://m.media-amazon.com/images/I/81j68lR9cLL._AC_SY741_.jpg',
+    'https://m.media-amazon.com/images/I/71-NtmCrtcL._AC_SX569_.jpg',
+    'https://m.media-amazon.com/images/I/71aZgTkBfpL._AC_SX569_.jpg'
+  ];
 
 const Product = () => {
     const SelectItem = React.forwardRef(
@@ -29,10 +35,7 @@ const Product = () => {
     return (
         <div className="product-card">
             <div className="Container">
-                    <img className="Image"
-                        src="https://m.media-amazon.com/images/I/81lrHgxEvCL._AC_SX679_.jpg"
-                        alt="Ice Blue-shortMen's Polo Shirt Quick Dry"
-                    />
+                <ImageSlider images={images} />
             </div>
             <div className="product-data">
                 <h2 className="product-name">MAGCOMSEN Men's Polo Shirt Quick Dry Performance Short Sleeve Tactical Shirts Pique Jersey Golf Shirt</h2>
